@@ -1,6 +1,16 @@
 # Modular-FPS-Mulltiplayer
 Multiplayer version of the [Modular FPS](https://www.youtube.com/watch?v=ESh2hmG-y6U) Project!
 
+Made by [Saharsh1223](https://www.youtube.com/SaharshDev). All i need is a bit of credit :)
+
+Credits to the free assets i've used!
+[Low Poly Weapons VOL.1](https://assetstore.unity.com/packages/3d/props/guns/low-poly-weapons-vol-1-151980),
+[Fantasy Skybox FREE](https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353),
+[Crosshair Pack](https://www.kenney.nl/assets/crosshair-pack),
+[Unity Particle Pack 5.x](https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-5-x-73777),
+[Free 2D Mega Pack](https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430),
+[PUN 2 - FREE](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922)
+
 # Setup
 In order to set up the code and get it running, you will have to provide your own Photon AppID in the PhotonServerSettings file by the following steps:
 
