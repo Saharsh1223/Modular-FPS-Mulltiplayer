@@ -5,15 +5,17 @@ public class Timer : MonoBehaviour
 {
     public float timeLeft;
     [HideInInspector] public bool timerOn = true;
+    [HideInInspector] public bool startedGame = false; 
 
     public TMP_Text timerText;
    
-    void Start()
+    private void Start()
     {
-        timerOn = true;
+        Invoke("CountDown3", 3f);
+        timerText.text = "Game starting soon...";
     }
 
-    void Update()
+    private void Update()
     {
         if(timerOn)
         {
@@ -30,7 +32,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void UpdateTimer(float currentTime)
+    private void UpdateTimer(float currentTime)
     {
         currentTime += 1;
 
@@ -38,5 +40,35 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         timerText.text = $"{minutes:00}:{seconds:00}";
+    }
+
+    private void CountDown3()
+    {
+        Invoke("CountDown2", 1f);
+        timerText.text = "Game starting in 3";
+    }
+    
+    private void CountDown2()
+    {
+        Invoke("CountDown1", 1f);
+        timerText.text = "Game starting in 2";
+    }
+    
+    private void CountDown1()
+    {
+        Invoke("CountDown0", 1f);
+        timerText.text = "Game starting in 1";
+    }
+
+    private void CountDown0()
+    {
+        timerText.text = "Game started!";
+        Invoke("StartGame", 1f);
+    }
+
+    private void StartGame()
+    {
+        timerOn = true;
+        startedGame = true;
     }
 }

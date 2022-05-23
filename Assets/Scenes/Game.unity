@@ -8742,7 +8742,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85222
+  m_Name: pb_Mesh73166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8955,7 +8955,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85504
+  m_Name: pb_Mesh73472
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11109,7 +11109,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh153480
+  m_Name: pb_Mesh73432
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11320,7 +11320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85552
+  m_Name: pb_Mesh73528
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11576,7 +11576,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85238
+  m_Name: pb_Mesh73182
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11739,7 +11739,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85332
+  m_Name: pb_Mesh73284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11902,7 +11902,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85370
+  m_Name: pb_Mesh73322
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12376,7 +12376,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85516
+  m_Name: pb_Mesh73484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12539,7 +12539,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85250
+  m_Name: pb_Mesh73194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12702,7 +12702,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85482
+  m_Name: pb_Mesh73444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13220,7 +13220,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85310
+  m_Name: pb_Mesh73262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13615,7 +13615,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85388
+  m_Name: pb_Mesh73340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14408,7 +14408,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85436
+  m_Name: pb_Mesh73388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18586,8 +18586,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16074d164cd74ed4a90893596c5d345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 20
+  timeLeft: 900
   timerOn: 0
+  startedGame: 0
   timerText: {fileID: 1889400958}
 --- !u!4 &1582250451
 Transform:
@@ -19275,7 +19276,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85580
+  m_Name: pb_Mesh73550
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19438,7 +19439,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh85272
+  m_Name: pb_Mesh73224
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19771,7 +19772,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 469.6443, y: 150.61356}
+  m_SizeDelta: {x: 1225.6243, y: 150.61356}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1889400958
 MonoBehaviour:
@@ -19792,7 +19793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 15:00
+  m_text: Game starting soon...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd54b782b32e04aae90686445f2f6380, type: 2}
   m_sharedMaterial: {fileID: 4869264575742152612, guid: dd54b782b32e04aae90686445f2f6380,

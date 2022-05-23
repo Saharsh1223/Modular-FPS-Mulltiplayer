@@ -22,10 +22,10 @@ public class PlayerManager : MonoBehaviour
 
     private void CreateController()
     {
-        Debug.Log("Instantiated Player");
-
         Transform spawnPoint = SpawnManager.Instance.GetSpawnPoint();
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), spawnPoint.position, spawnPoint.rotation, 0, new object[] { pv.ViewID }); //Instantiate our Player Controller
+        
+        Debug.Log("Instantiated Player");
 
         controller.GetComponent<PlayerMovement>().transform.rotation = Quaternion.identity;
         controller.GetComponent<PlayerMovement>().orientation.rotation = spawnPoint.rotation;

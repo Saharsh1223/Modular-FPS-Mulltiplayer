@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
+    
     [HideInInspector] public Timer timer;
 
     private void Awake()
@@ -39,6 +40,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if (scene.buildIndex == 2)
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
+            
             timer = FindObjectOfType<Timer>();
         }
     }

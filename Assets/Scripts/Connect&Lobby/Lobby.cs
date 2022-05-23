@@ -28,10 +28,6 @@ public class Lobby : MonoBehaviourPunCallbacks
     {
         //Check if has the previous saved data of the Username and if so, then load it.
         if (PlayerPrefs.HasKey("usernameKey")) usernameInput.text = PlayerPrefs.GetString("usernameKey");
-
-        //Make sure the Game timer Input Fields are Zero!
-        creatingRooms.gameTimeMinutes.text = "00";
-        creatingRooms.gameTimeSeconds.text = "00";
     }
 
     private void Update()
@@ -83,6 +79,7 @@ public class Lobby : MonoBehaviourPunCallbacks
     public void StartGame()
     {
         PhotonNetwork.LoadLevel("Game"); //Load the Game Scene!
+        
     }
     
     //Executed when "Leave Room" Button is Clicked in the Player waiting List!
@@ -97,55 +94,6 @@ public class Lobby : MonoBehaviourPunCallbacks
         usernamePanel.SetActive(true);
 
         PhotonNetwork.JoinLobby(); //Make sure to Join the Lobby to get the Room List Updates!
-    }
-    
-    //Executed to Filter the Game Time Minutes InputField 
-    public void FilterGameTimeMinutes()
-    {
-        //Make sure we are only allowing the user to type in numbers
-        creatingRooms.gameTimeMinutes.characterValidation = TMP_InputField.CharacterValidation.Digit;
-        
-        //Make sure the user is only allowed to use the numbers from 0 to 60 (you can change it)
-        if (int.Parse(creatingRooms.gameTimeMinutes.text) > 60f)
-        {
-            creatingRooms.gameTimeMinutes.text = "60";
-        }
-        
-        //Set the default text to "00" if there is no input
-        if (creatingRooms.gameTimeMinutes.text == null)
-        {
-            creatingRooms.gameTimeMinutes.text = "00";
-        }
-    }
-    
-    //Executed to Filter the Game Time Seconds InputField 
-    public void FilterGameTimeSeconds()
-    {
-        //Make sure we are only allowing the user to type in numbers
-        creatingRooms.gameTimeSeconds.characterValidation = TMP_InputField.CharacterValidation.Digit;
-        
-        //Make sure the user is only allowed to use the numbers from 0 to 60 (you can change it)
-        if (int.Parse(creatingRooms.gameTimeSeconds.text) > 60f)
-        {
-            creatingRooms.gameTimeSeconds.text = "60";
-        }
-        
-        //Set the default text to "00" if there is no input
-        if (creatingRooms.gameTimeSeconds.text == null)
-        {
-            creatingRooms.gameTimeSeconds.text = "00";
-        }
-    }
-
-    //Basic Time Conversion
-    public void GetSecondsFromMinutesAndSeconds()
-    {
-        float minutes = float.Parse(creatingRooms.gameTimeMinutes.text); //Get the minutes
-        float seconds = float.Parse(creatingRooms.gameTimeSeconds.text); //Get the seconds
-
-        //Calculate!
-        float totalMinutes = (0f * 60f) + minutes + (seconds / 60f); 
-        float totalSeconds = totalMinutes * 60f;
     }
 
     #endregion
@@ -257,9 +205,6 @@ public class CreateRoom
     public TMP_InputField createInput;
     public TMP_Text sliderValueText;
     public Slider valueSlider;
-    [Space]
-    public TMP_InputField gameTimeMinutes;
-    public TMP_InputField gameTimeSeconds;
 }
 
 [System.Serializable]
@@ -286,8 +231,6 @@ public class WaitingInRooms
     public TMP_Text playerRoomNameText;
     [Space]
     public GameObject startGameButton;
-
-    [HideInInspector] public int totalGameTimeInSeconds;
 }
 
 #endregion

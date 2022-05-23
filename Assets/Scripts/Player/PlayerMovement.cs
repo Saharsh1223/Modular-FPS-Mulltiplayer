@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
     [Space]
     [SerializeField] private UsernameDisplay usernameDisplay;
     [SerializeField] private Look playerLook;
+    [Space]
+    [SerializeField] private TMP_Text killedByText;
 
     [Header("Movement")]
     [SerializeField] private float speed = 40f;
@@ -71,10 +73,12 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
 
     private Vector3 moveDirection;
     public PhotonView pv;
-    public string playerName;
+    [HideInInspector] public string playerName;
 
     private float h;
     private float v;
+
+    private float sendGameOverOnce;
 
     private void Awake()
     {
@@ -109,7 +113,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
             return;
         }
 
-        if (!RoomManager.Instance.timer.timerOn)
+        if (!RoomManager.Instance.timer.timerOn && RoomManager.Instance.timer.startedGame)
         {
             SetGameOver();
         }
@@ -165,12 +169,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
 
     public void Resume()
     {
-        pauseMenuPanel.SetActive(true);
+        pauseMenuPanel.SetActive(false);
     }
 
     public void SetGameOver()
     {
-        Debug.Log("Game OVER!");
         pv.RPC("GameOverRPC", RpcTarget.All);
     }
     
@@ -311,10 +314,10 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
         pv.RPC("RPC_TakeDamage", RpcTarget.All, damage);
     }
 
-    private void Die()
+    private void Die(Player player)
     {
         playerManager.Die();
-        pv.RPC("DieRPC", RpcTarget.All);
+        pv.RPC("DieRPC", RpcTarget.All, player);
     }
 
     private void OnCollisionStay(Collision collisionInfo)
@@ -334,10 +337,12 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
     }
     
     [PunRPC]
-    private void RPC_TakeDamage(float damage)
+    private void RPC_TakeDamage(float damage, PhotonMessageInfo info)
     {
         if(!pv.IsMine)
             return;
+
+        Player sender = info.Sender;
         
         Debug.Log("Took damage:" + damage);
         currentHealth -= damage;
@@ -345,12 +350,12 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
 
         if (currentHealth <= 0 && RoomManager.Instance.timer.timerOn)
         {
-            Die();
+            Die(sender);
         }
     }
 
     [PunRPC]
-    private void DieRPC(PhotonMessageInfo info)
+    private void DieRPC(Player sender)
     {
         GetComponent<CapsuleCollider>().enabled = false;
         
@@ -363,7 +368,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
         usernameDisplay.gameObject.SetActive(false);
         
         rb.useGravity = false;
-        Debug.Log(info.Sender.NickName);
+
+        killedByText.text = "KILLED BY: " + sender.NickName;
     }
     
     [PunRPC]
@@ -380,5 +386,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
         usernameDisplay.gameObject.SetActive(false);
         
         rb.useGravity = false;
+        
+        Debug.Log("Game OVER!");
     }
 }
