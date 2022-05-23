@@ -40,7 +40,7 @@ public class Gun : Weapons
     public bool automatic;
 
     [Header("Shooting")]
-    [SerializeField] private float shootForce = 3f;
+    //[SerializeField] private float shootForce = 3f;
     public float fireRate = 15f;
     [HideInInspector] public float nextTimeToFire = 0f;
 
