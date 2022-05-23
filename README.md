@@ -59,7 +59,7 @@ And finally, paste in the App ID you've just copied into the `PUN Wizard` setup 
 ![Screenshot 2022-05-22 at 10 42 13 PM](https://user-images.githubusercontent.com/88390577/169707267-9215f189-579a-4086-af7e-84acfe582258.png)
 
 
-# Lisence (do whatever you want, all i need is some credit)
+# Lisence (do whatever you want, all i need is some credit and please don't sue me)
 MIT License
 
 Copyright (c) 2022 Saharsh1223

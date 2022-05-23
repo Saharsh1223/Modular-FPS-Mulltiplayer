@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 Assets/External Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
 Build
+.DS_Store
