@@ -39,7 +39,7 @@ Once Logged in to your account, click `Dashboard`:
 ![Screenshot 2022-05-22 at 10 30 06 PM](https://user-images.githubusercontent.com/88390577/169706830-7b7e5401-3c13-489f-bf69-758bf01898c1.png)
 
 
-In the dashboard, create a new app as promted:
+In the dashboard, create a new app as shown:
 
 ![Screenshot 2022-05-22 at 10 31 31 PM](https://user-images.githubusercontent.com/88390577/169706885-d513a41d-c372-4c09-a720-ef88ec683ad4.png)
 
@@ -54,7 +54,7 @@ Once you have been redirected to the Dashboard, find your App and copy the `App 
 ![Screenshot 2022-05-22 at 10 36 57 PM](https://user-images.githubusercontent.com/88390577/169707116-e8530c8d-61c7-4e73-8892-1aa93cc2cfc3.png)
 
 
-And finally, paste in the App ID you've just copied into the `PUN Wizard` setup screen you've been promted to and click `Setup Project` button to finally setup your project!
+And finally, paste in the App ID you've just copied into the `PUN Wizard` setup screen and click `Setup Project` button to finally setup your project!
 
 ![Screenshot 2022-05-22 at 10 42 13 PM](https://user-images.githubusercontent.com/88390577/169707267-9215f189-579a-4086-af7e-84acfe582258.png)
 
