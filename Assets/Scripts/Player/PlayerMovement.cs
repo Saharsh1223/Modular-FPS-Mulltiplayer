@@ -350,7 +350,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
     }
 
     [PunRPC]
-    private void DieRPC()
+    private void DieRPC(PhotonMessageInfo info)
     {
         GetComponent<CapsuleCollider>().enabled = false;
         
@@ -363,6 +363,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IDamageable/*, IPunObse
         usernameDisplay.gameObject.SetActive(false);
         
         rb.useGravity = false;
+        Debug.Log(info.Sender.NickName);
     }
     
     [PunRPC]
