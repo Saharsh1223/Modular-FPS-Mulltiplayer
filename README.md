@@ -14,7 +14,7 @@ Credits to the free assets i've used!
 # Setup
 In order to set up the code and get it running, you will have to provide your own Photon AppID in the PhotonServerSettings file by the following steps:
 
-And of course this is what i am talking about:
+And of course this is what i am talking about if this popped up for you when you opened your project, don't close it:
 
 ![Screenshot 2022-05-22 at 10 47 42 PM](https://user-images.githubusercontent.com/88390577/169707441-e8cb408f-b2f2-40b5-89d3-3aab725c9a51.png)
 
