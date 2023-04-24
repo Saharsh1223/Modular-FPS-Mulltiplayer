@@ -62,7 +62,7 @@ And finally, paste in the App ID you've just copied into the `PUN Wizard` setup 
 # Lisence (do whatever you want, please don't sue me)
 MIT License
 
-Copyright (c) 2022 Saharsh1223
+Copyright (c) 2023 Saharsh1223
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
